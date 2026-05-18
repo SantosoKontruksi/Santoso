@@ -1,0 +1,509 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+
+/* Reset dasar browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Efek scroll halus */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Pengaturan dasar body */
+body {
+    background-color: #f0f4f8;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: #111111;
+}
+
+/* Reset list menu */
+ul {
+    list-style: none;
+}
+
+/* Reset dekorasi link */
+a {
+    text-decoration: none;
+}
+
+/* Hero section */
+section {
+    width: 100%;
+    height: 55vh;
+    position: relative;
+    background: rgb(3, 50, 151);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+/* Navbar menu atas */
+nav {
+    width: 100%;
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #071636;
+    border-bottom: 3px solid #0056cc;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+
+/* Desain teks logo */
+.logo {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Tata letak menu navigasi */
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+/* Link teks menu navigasi */
+nav ul li a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+/* Hover menu dan menu aktif */
+nav ul li a:hover,
+nav ul li a.active {
+    color: #0077ff;
+}
+
+/* Pembungkus teks hero */
+.hero-text {
+    max-width: 800px;
+    color: #ffffff;
+    margin-top: 60px;
+}
+
+/* Judul utama hero */
+.hero-text h1 {
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Deskripsi teks hero */
+.hero-text p {
+    font-size: 15px;
+    color: #cedbf2;
+    line-height: 28px;
+}
+
+/* Seksi tentang kami */
+.about {
+    width: 100%;
+    padding: 100px 9%;
+    background: #ffffff;
+}
+
+/* Penata layout teks dan foto berdampingan */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Kolom teks profil */
+.about-text {
+    flex: 1;
+}
+
+/* Label sub-judul profil */
+.about-text .sub-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #0056cc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Judul utama bagian profil */
+.about-text h2 {
+    color: #071636;
+    font-size: 38px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 46px;
+}
+
+/* Garis dekorasi pembatas */
+.line-decor {
+    width: 70px;
+    height: 5px;
+    background: #0056cc;
+    margin: 15px 0 30px 0;
+}
+
+/* Paragraf teks profil */
+.about-text p {
+    color: #4a5568;
+    font-size: 15.5px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Kolom area foto profil */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pengaturan bingkai gambar profil */
+.about-image img {
+    width: 110%;
+    max-width: 430px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 4px solid #071636;
+    box-shadow: 0 15px 35px rgba(7, 22, 54, 0.15);
+}
+
+/* Seksi keunggulan */
+.keunggulan {
+    width: 100%;
+    padding: 100px 8%;
+    background: #f4f7fc;
+}
+
+/* Judul seksi keunggulan */
+.keunggulan-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Teks utama judul keunggulan */
+.keunggulan-title h2 {
+    font-size: 42px;
+    font-weight: 900;
+    color: #071636;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+/* Garis bawah dekorasi judul keunggulan */
+.keunggulan-title h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 5px;
+    background: #0056cc;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Susunan grid kartu keunggulan */
+.keunggulan-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Kotak kartu keunggulan */
+.keunggulan-box {
+    background: #071636;
+    border-top: 5px solid #0056cc;
+    padding: 45px 30px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+/* Efek hover kartu keunggulan */
+.keunggulan-box:hover {
+    transform: translateY(-5px);
+    background: #0b2252;
+}
+
+/* Nomor besar kartu keunggulan */
+.badge-num {
+    font-size: 35px;
+    font-weight: 900;
+    color: #0056cc;
+    margin-bottom: 15px;
+}
+
+/* Judul di dalam kartu keunggulan */
+.keunggulan-box h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Detail teks kartu keunggulan */
+.keunggulan-box p {
+    color: #cedbf2;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+/* Seksi program magang */
+.magang {
+    width: 100%;
+    padding: 100px 8%;
+    background: #ffffff;
+}
+
+/* Judul seksi program magang */
+.magang-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Teks utama judul magang */
+.magang-title h2 {
+    font-size: 42px;
+    font-weight: 900;
+    color: #071636;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Deskripsi program magang */
+.magang-title p {
+    color: #555555;
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 24px;
+}
+
+/* Layout flexbox logo instansi magang */
+.magang-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Kotak pembungkus gambar logo sekolah */
+.magang-box {
+    width: 320px;
+    height: 180px;
+    background: #f4f7fc;
+    border: 2px solid #e2ebd5;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+/* Efek hover kotak logo sekolah */
+.magang-box:hover {
+    border-color: #0056cc;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateY(-3px);
+}
+
+/* Pengaturan gambar logo di dalam kotak */
+.magang-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Seksi footer kaki halaman */
+footer {
+    background: #071636;
+    padding: 60px 8%;
+    border-top: 5px solid #0056cc;
+}
+
+/* Kontainer layout isi footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer bagian kiri */
+.footer-left {
+    flex: 1;
+    min-height: 320px;
+}
+
+/* Peta Google Maps */
+.footer-left iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 3px solid #0056cc;
+    border-radius: 4px;
+}
+
+/* Footer bagian kanan */
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: #ffffff;
+}
+
+/* Pembungkus judul kontak */
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+/* Ikon penanda info kontak */
+.footer-contact i {
+    color: #0077ff;
+    font-size: 24px;
+}
+
+/* Teks judul kontak */
+.footer-contact span {
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Deskripsi singkat di footer */
+.footer-desc {
+    color: #cedbf2;
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+
+/* Tombol tautan WhatsApp */
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Ukuran ikon WhatsApp */
+.social-icons a i {
+    font-size: 20px;
+}
+
+/* tombol WhatsApp */
+.social-icons a:hover {
+    background: #1ebd54;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* Teks hak cipta */
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    color: #8fa4c7;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+
+/* Responsif layar*/
+@media(max-width: 1000px){
+    section {
+        height: 45vh;
+        padding: 0 5%;
+    }
+    .about-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .about-image img {
+        height: 350px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-right {
+        text-align: center;
+        align-items: center;
+    }
+    .footer-contact {
+        justify-content: center;
+    }
+}
+
+/* Responsif layar*/
+@media(max-width: 768px){
+    nav ul {
+        gap: 15px;
+    }
+    nav ul li a {
+        font-size: 11px;
+    }
+    .hero-text h1 {
+        font-size: 38px;
+    }
+    .about-text h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+/* Responsif layar */
+@media(max-width: 500px){
+    nav ul {
+        display: none;
+    }
+    .keunggulan-title h2, .magang-title h2 {
+        font-size: 32px;
+    }
+}

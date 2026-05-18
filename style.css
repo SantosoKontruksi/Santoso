@@ -1,0 +1,487 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+
+/* Reset dasar browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Efek scroll halus */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Pengaturan tampilan body */
+body {
+    background-color: #f0f4f8;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: #111111;
+}
+
+/* Reset list menu */
+ul {
+    list-style: none;
+}
+
+/* Reset link dekorasi */
+a {
+    text-decoration: none;
+}
+
+/* Tampilan utama hero section */
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url("images/wp.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navigasi menu bar atas */
+nav {
+    width: 100%;
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #071636;
+    border-bottom: 3px solid #0056cc;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+
+/* Desain komponen teks logo */
+.logo {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Layout deretan menu navigasi */
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+/* Gaya teks link menu navigasi */
+nav ul li a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+/* Efek hover dan status menu aktif */
+nav ul li a:hover,
+nav ul li a.active {
+    color: #0077ff;
+}
+
+/* Area teks judul bagian seksi */
+.services-text {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Elemen teks utama judul seksi */
+.services-text p {
+    font-size: 42px;
+    font-weight: 900;
+    color: #071636;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+/* Garis dekorasi di bawah judul seksi */
+.services-text p::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 5px;
+    background: #0056cc;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Pembungkus seksi layanan utama */
+.services {
+    width: 100%;
+    padding: 100px 8%;
+    background: #f4f7fc;
+}
+
+/* Penata posisi kotak-kotak kartu layanan */
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Pengaturan dasar kartu layanan */
+.box-1, .box-2, .box-3 {
+    width: 350px;
+    min-height: 320px;
+    background: #071636;
+    border-top: 5px solid #0056cc;
+    border-radius: 4px;
+    padding: 40px 30px;
+    text-align: left;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Efek hover saat kartu layanan didekati */
+.box-1:hover, .box-2:hover, .box-3:hover {
+    transform: translateY(-8px);
+    background: #0b2252;
+    box-shadow: 0 15px 30px rgba(0, 86, 204, 0.3);
+}
+
+/* Penomoran berbentuk kotak pada kartu layanan */
+.box-1 span, .box-2 span, .box-3 span {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    background: #0056cc;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* Judul teks di dalam kartu layanan */
+.box-1 .heading, .box-2 .heading, .box-3 .heading {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Detail deskripsi di dalam kartu layanan */
+.box-1 .details, .box-2 .details, .box-3 .details {
+    color: #cedbf2;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+/* Pembungkus seksi keunggulan perusahaan */
+.advantages {
+    width: 100%;
+    padding: 100px 8%;
+    background: #ffffff;
+}
+
+/* Kisi-kisi grid untuk kartu keunggulan */
+.adv-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Pengaturan tampilan kartu keunggulan */
+.adv-card {
+    background: #ffffff;
+    padding: 45px 30px;
+    border: 2px solid #e2ebd5;
+    border-top: 5px solid #071636;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Efek hover kartu keunggulan */
+.adv-card:hover {
+    border-color: #0056cc;
+    border-top-color: #0056cc;
+    box-shadow: 0 12px 25px rgba(7, 22, 54, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Elemen nomor penanda kartu keunggulan */
+.adv-badge {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0056cc;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Teks judul kartu keunggulan */
+.adv-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #071636;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Teks paragraf isi kartu keunggulan */
+.adv-card p {
+    font-size: 14px;
+    line-height: 25px;
+    color: #4a5568;
+}
+
+/* Pembungkus seksi alur kerja proyek */
+.workflow {
+    width: 100%;
+    padding: 100px 8%;
+    background: #071636;
+    color: #ffffff;
+}
+
+/* Penyesuaian warna judul seksi alur kerja */
+.workflow .services-text p {
+    color: #ffffff;
+}
+
+/* Tata letak grid kartu langkah alur kerja */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* Komponen dasar kartu alur kerja */
+.step-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 25px;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* Karakter huruf penanda alur kerja */
+.step-num {
+    font-size: 45px;
+    font-weight: 900;
+    color: #0056cc;
+    margin-bottom: 15px;
+}
+
+/* Judul teks tahapan alur kerja */
+.step-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Deskripsi isi tahapan alur kerja */
+.step-card p {
+    font-size: 13.5px;
+    color: #a3b8cc;
+    line-height: 24px;
+}
+
+/* Pembungkus area galeri foto */
+.testimoni {
+    width: 100%;
+    padding: 100px 8%;
+    background: #ffffff;
+}
+
+/* Layout struktur grid foto galeri */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Bingkai pembungkus gambar individu */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 4px;
+    border: 3px solid #071636;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Penyesuaian dimensi dan sifat gambar */
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+/* Efek memperbesar gambar saat disorot mouse */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Area kaki halaman atau footer */
+footer {
+    background: #071636;
+    padding: 60px 8%;
+    border-top: 5px solid #0056cc;
+}
+
+/* Kontainer flexbox isi footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Area footer bagian kiri */
+.footer-left {
+    flex: 1;
+    min-height: 320px;
+}
+
+/* Integrasi peta Google Maps */
+.footer-left iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 3px solid #0056cc;
+    border-radius: 4px;
+}
+
+/* Area footer bagian kanan */
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: #ffffff;
+}
+
+/* Pembungkus baris judul kontak */
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+/* Ikon penanda piringan telepon */
+.footer-contact i {
+    color: #0077ff;
+    font-size: 24px;
+}
+
+/* Teks judul kontak informasi */
+.footer-contact span {
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ringkasan profil singkat perusahaan di footer */
+.footer-desc {
+    color: #cedbf2;
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+
+/* Tombol penghubung menuju chat WhatsApp */
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Ukuran dimensi ikon WhatsApp */
+.social-icons a i {
+    font-size: 20px;
+}
+
+/* Efek animasi hover tombol WhatsApp */
+.social-icons a:hover {
+    background: #1ebd54;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* Hak cipta pembuat halaman web */
+.copyright {
+    margin-top: 30px;
+    color: #8fa4c7;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+
+/* Responsif untuk layar tablet dan monitor kecil */
+@media(max-width: 1000px){
+    section {
+        height: 40vh;
+    }
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-right {
+        text-align: center;
+        align-items: center;
+    }
+    .footer-contact {
+        justify-content: center;
+    }
+}
+
+/* Responsif untuk layar smartphone orientasi landscape */
+@media(max-width: 768px){
+    nav ul {
+        gap: 15px;
+    }
+    nav ul li a {
+        font-size: 11px;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsif untuk layar smartphone potrait yang kecil */
+@media(max-width: 500px){
+    nav ul {
+        display: none;
+    }
+    .services-text p {
+        font-size: 32px;
+    }
+}
